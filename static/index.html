@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-search">
+            <div class="container-search-titile">
+
+            </div>
+            <div class="container-search-input">
+                <form method="post" action="script.php">
+
+                    <!-- Input the Link -->
+                    <input type="text" placeholder="LINK">
+
+                    <!-- PDF DOCS OR XLS -->
+                    <select name="Format">
+                        <option value="PDF">PDF File</option>
+                        <option value="Word">Word File</option>
+                        <option value="Excel">Excel File</option>
+                      </select>
+
+                    <!-- is it in title, link, or files -->
+                    <select name="Filter">
+                        <option value="inTitle">In the Title</option>
+                        <option value="inLink">In the Link</option>
+                        <option value="inWebSite">On the Website</option>
+                        <option value="inFiles">In the Files</option>
+                      </select>
+
+                    <!-- start the search -->
+                    <button style="height: 30px; width: 50px;" type="submit"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
