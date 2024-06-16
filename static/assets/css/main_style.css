@@ -22,14 +22,34 @@ body {
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* gap: 3vh; */
+  width: 65%;
   flex-direction: column;
 }
 
 .form-url {
   display: flex;
   justify-content: center;
-  gap: 3vh;
+  flex-direction: column;
+}
+
+.container-search-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-search-output {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-url-input {
+  height: 4vh;
+  margin-top: 1vh;
+  border-radius: 14px;
 }
 
 /*# sourceMappingURL=main_style.css.map */
