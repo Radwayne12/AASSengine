@@ -88,6 +88,7 @@ get_google()
 sleep(1)
 
 get_links()
+print(link_title)
 
-with open('scripts/data/scraped.json', 'w') as file:
-    dump(link_title, file)
+with open('scripts/data/scraped.json', 'w', encoding='utf-8') as file:
+    dump(link_title, file, ensure_ascii=False)
