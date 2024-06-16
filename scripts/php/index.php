@@ -51,7 +51,7 @@
                 </form>
             </div>
             <div class="container-search-output">
-                <div class="container-search-output-link">
+                <!-- <div class="container-search-output-link">
                     <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
                     <button>Download</button>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="container-search-output-link">
                     <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
+                    <button>Download</button> -->
                 </div>
             </div>
         </div>
@@ -86,45 +86,50 @@
             $keyphrase = $_POST['keyphrase'];
 
             // echo "<div class='container-search-output-link'> <a class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>$link</a><button>Download</button></div><a href='$link'>$link</a>" . '<br>';
-            // echo"$format". "<br>";
+            // echo"$link". "<br>";
             // echo "$filter" . "<br>"; 
             // echo "\n$keyphrase". "<br>";
 
-            $setup_file = fopen("meta.json","w");
+            $setup_file = fopen("meta.json","w");  // scripts\data\meta.json;
 
             $send_data = new stdClass();
             $send_data -> url = "$link";
             $send_data -> format = "$format";
             $send_data -> option = "$filter";       // this is the filter for the search;
             $send_data -> phrase = "$keyphrase";
+            
+            //echo gettype($send_data);
+
             $send_data_json = json_encode($send_data);
 
 
             fwrite($setup_file,$send_data_json);
             fclose($setup_file);
-            sleep(7);
             
-            $json_data = fopen("scrape.json","r");
+            $json_data = fopen("scraphed.json","r"); // scripts\data\scraped.json;
+            $data = fread($json_data,filesize("scraphed.json"));
+        
             fclose($json_data);
 
-            $data = json_decode($json_data);
+            $data = json_decode($data);
+            echo gettype($data);
+            $keys = array_keys((array)$data);
 
+            $value = array();
+            $arr = get_object_vars($data);
 
-
-            
-            echo "<div class='container-search-output-link'> <a class='link-output' href='$data -> url'>$data -> url </a><button>Download</button></div>";
-           
-                // try{
-                //     mysqli_query($db_connection,$sql);
-                //     echo("You are now registered.");
-                // }
-                // catch(mysqli_sql_exception){
-                //     echo("You are not registered.");
-                // }
+            foreach($arr as $ar ){
+                $value[] = $ar;
             }
+            echo $value[0];
+            for ($i = 0; $i < count($keys); $i++ ){
+                echo "<div class='container-search-output-link'> <a class='link-output' href='$keys[$i]'>$value[$i]</a><button>Download</button></div>";
+            }
+        
+        }
     }
     catch(error){
-        echo("Something went wrong with the registration process.");
+        echo"$error";
     }
 
 ?>
