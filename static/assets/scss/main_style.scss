@@ -4,3 +4,25 @@ body{
     height: 100vh;
     margin: 0;
 }
+.link-output{
+    font-size: 2vh;
+}
+.container-search{
+    padding-top: 7%;
+}
+.container-search-titile{
+    padding-bottom: 7%;
+    display: flex;
+    justify-content: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-url{
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+}
