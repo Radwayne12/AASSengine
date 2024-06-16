@@ -7,10 +7,10 @@
     <link href="assets/css/main_style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="container-search">
-            <div class="container-search-titile">
-                <h1>Hello, There!</h1>
+    <div class='container'>
+        <div class='container-search'>
+            <div class='container-search-titile'>
+                <h1>Welcome to AASS Engine!</h1>
             </div>
             <div class="container-search-input">
                 <form method="post" action="index.php">
@@ -20,57 +20,75 @@
                         <label>What Website so you want to scan?</label>
                         <input class="form-url-input" name="url" type="url" placeholder="Enter the URL">
                     </div>
-                    <div class="form-keyphrase">                    
-                        <label>What phrase are you looking for?</label>
-                        <input name="keyphrase" type="text" placeholder="Enter the key phrase in the search">
-                    </div>
-                    <div>
-                        <!-- PDF DOCS OR XLS -->
-                        <label>Select a Format</label>
-                        <select name="format">
-                            <option value="keyphrase">Key phrase</option>
-                            <option value="pdf">PDF File</option>
-                            <option value="word">Word File</option>
-                            <option value="excel">Excel File</option>
-                        </select>
-                    </div>
+                    <div style="margin-top: 4%;">
+                        <div class='form-keyphrase'>                    
+                            <label>What phrase are you looking for?</label>
+                            <input class='form-keyphrase-input' name='keyphrase' type='text' placeholder='Enter the key phrase in the search'>
+                        </div>
 
-                    <div>
-                        <!-- is it in title, link, or files -->
-                        <label>Select where would you like to search for a KeyWord</label>
-                        <select name="filter">
-                            <option value="intitle">In the Title</option>
-                            <option value="inurl">In the URL</option>
-                            <option value="inwebpage">On the WebSite</option>
-                        </select>
+                        <div class="form-main-selection">
+                            <div class="form-selection">
+                                <!-- PDF DOCS OR XLS -->
+                                <label>Select a Format</label>
+                                <select name='format'>
+                                    <option value='keyphrase'>Key Word</option>
+                                    <option value='pdf'>PDF File</option>
+                                    <option value='word'>Word File</option>
+                                    <option value='excel'>Excel File</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-selection">
+                                <!-- is it in title, link, or files -->
+                                <label>Select where to search for</label>
+                                <select name='filter'>
+                                    <option value='intitle'>In the Title</option>
+                                    <option value='inurl'>In the URL</option>
+                                    <option value='inwebpage'>On the WebSite</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- submit the data and start the search -->
-                    <button style="height: 30px; width: 50px;" type="submit">Submit</button>
+                    <button class='botton-form' type='submit'>Submit</button>
 
                 </form>
             </div>
-            <div class="container-search-output">
-                <div class="container-search-output-link">
-                    <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
+            <div class='container-search-output'>
+                
+                <div class='container-search-output-link'>
+                    <div class="link-separate-container">
+                        <label class="link-title">WebPage Title</label>
+                        <a target="_blank" class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
+                    </div>
+                    <button class="link-separate-button">Download</button>
                 </div>
-                <div class="container-search-output-link">
-                    <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
+                
+                <div class='container-search-output-link'>
+                    <div class="link-separate-container">
+                        <label class="link-title">WebPage Title</label>
+                        <a target="_blank" class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
+                    </div>
+                    <button class="link-separate-button">Download</button>
                 </div>
-                <div class="container-search-output-link">
-                    <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
+                
+                <div class='container-search-output-link'>
+                    <div class="link-separate-container">
+                        <label class="link-title">WebPage Title</label>
+                        <a target="_blank" class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
+                    </div>
+                    <button class="link-separate-button">Download</button>
                 </div>
-                <div class="container-search-output-link">
-                    <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
+                
+                <div class='container-search-output-link'>
+                    <div class="link-separate-container">
+                        <label class="link-title">WebPage Title</label>
+                        <a target="_blank" class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
+                    </div>
+                    <button class="link-separate-button">Download</button>
                 </div>
-                <div class="container-search-output-link">
-                    <a class="link-output" href="https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J">https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J</a>
-                    <button>Download</button>
-                </div>
+
             </div>
         </div>
     </div>
