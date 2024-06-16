@@ -80,16 +80,27 @@
 <?php
     try{    
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $link = $_POST['Link'];
-            $format = $_POST['Format'];
-            $filter = $_POST['Filter'];
-            $keyphrase = $_POST['KeyPhrase'];
+            $link = $_POST['url'];
+            $format = $_POST['format'];
+            $filter = $_POST['filter'];
+            $keyphrase = $_POST['keyphrase'];
+
             // echo "<div class='container-search-output-link'> <a class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>$link</a><button>Download</button></div><a href='$link'>$link</a>" . '<br>';
             // echo"$format". "<br>";
             // echo "$filter" . "<br>"; 
             // echo "\n$keyphrase". "<br>";
-            $setup_file = fopen("meta.txt","w");
-            fwrite($setup_file,"$link\n$format\n$filter\n$keyphrase");
+
+            $setup_file = fopen("meta.json","w");
+
+            $send_data = new stdClass();
+            $send_data -> url = "$link";
+            $send_data -> format = "$format";
+            $send_data -> option = "$filter";       // this is the filter for the search;
+            $send_data -> phrase = "$keyphrase";
+            $send_data_json = json_encode($send_data);
+
+
+            fwrite($setup_file,$send_data_json);
             fclose($setup_file);
             sleep(7);
             
@@ -98,10 +109,11 @@
 
             $data = json_decode($json_data);
 
-            foreach($data as $link => $title){
-                echo "<div class='container-search-output-link'> <a class='link-output' href='https://youtu.be/dQw4w9WgXcQ?si=hJT4n5ROzmx8jC3J'>$link</a><button>Download</button></div><a href='$link'>$link</a>" . '<br>';
-            }
 
+
+            
+            echo "<div class='container-search-output-link'> <a class='link-output' href='$data -> url'>$data -> url </a><button>Download</button></div>";
+           
                 // try{
                 //     mysqli_query($db_connection,$sql);
                 //     echo("You are now registered.");
