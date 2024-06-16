@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="assets/css/main_style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -12,24 +13,30 @@
 
             </div>
             <div class="container-search-input">
-                <form method="post" action="script.php">
+                <form method="post" action="index.php">
 
                     <!-- Input the Link -->
-                    <input type="text" placeholder="LINK">
+                    <label>What Website so you want to scan?</label>
+                    <input name="Link" type="text" placeholder="LINK">
+
+                    <label>What phrase are you looking for?</label>
+                    <input name="KeyPhrase" type="text" placeholder="Key phrase in the search">
 
                     <!-- PDF DOCS OR XLS -->
+                    <label>Select a Format</label>
                     <select name="Format">
+                        <option value="Key phrase">Key phrase</option>
                         <option value="PDF">PDF File</option>
                         <option value="Word">Word File</option>
                         <option value="Excel">Excel File</option>
                       </select>
 
                     <!-- is it in title, link, or files -->
+                    <label>Select a Filter</label>
                     <select name="Filter">
                         <option value="inTitle">In the Title</option>
                         <option value="inLink">In the Link</option>
-                        <option value="inWebSite">On the Website</option>
-                        <option value="inFiles">In the Files</option>
+                        <option value="inWebSite">On the WebSite</option>
                       </select>
 
                     <!-- start the search -->
