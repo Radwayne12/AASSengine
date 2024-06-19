@@ -78,3 +78,6 @@ print(link_title)
 
 with open('scripts/data/scraped.json', 'w', encoding='utf-8') as file:
     dump(link_title, file, ensure_ascii=False)
+
+sleep(1)
+driver.close()
