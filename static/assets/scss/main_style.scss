@@ -14,15 +14,31 @@ body{
 }
 input{
     height: 3vh;
-    border-radius: 14px;
+    border-radius: 10px;
     border: none;
 }
 .form-keyphrase-input{
     height: 3.5vh;
     width: 35%;
 }
+.form-main-input{
+    width: 100%;
+    /* width: 100%; */
+    align-items: center;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+    color: white;
+    z-index: 0;
+    border-radius: 14px;
+    background: black;
+    margin-top: 4%;
+}
 .form-main-selection{
-    margin-top: 1vh;
+    gap: 3vh;
+    width: 95%;
+    /* margin-top: 1vh; */
     display: flex;
     justify-content: center;
 }
@@ -32,14 +48,14 @@ select{
     border: none;
 }
 .form-selection{
-    gap: 4vh;
+    gap: 2vh;
     justify-content: center;
     display: flex;
     align-items: center;
     width: 50%;
 }
 .container-search{
-    padding-top: 7%;
+    padding-top: 5%;
 }
 .container-search-titile{
     padding-bottom: 7%;
@@ -60,19 +76,28 @@ select{
     width: 80px;
     box-shadow: 2px 3px;
     border-radius: 14px;
+    transition: 0.2s;
+    &:hover{
+        box-shadow: 1px 1px;
+        transition: 0.2s;
+        background-color: rgba($color: #a8d8a7, $alpha: 1.0);
+    }
 }
 .link-separate-container{
     display: flex;
     flex-direction: column;
 }
 form{
+    /* justify-content: flex-start; */
     display: flex;
     justify-content: center;
     /* gap: 3vh; */
-    width: 65%;
+    align-items: center;
+    width: 90%;
     flex-direction: column;
 }
 .form-url{
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -96,9 +121,18 @@ form{
     border-radius: 14px;
 }
 .botton-form{
+    align-self: start;
+    /* display: flex; */
     height: 35px;
+    /* justify-content: left; */
     width: 80px;
     box-shadow: 2px 3px;
-    margin-top: 5%;
+    margin-top: 3%;
     border-radius: 14px;
+    transition: 0.3s;
+    &:hover{
+        box-shadow: 1px 1px;
+        transition: 0.2s;
+        background-color: rgba($color: #a8d8a7, $alpha: 1.0);
+    }
 }
