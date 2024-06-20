@@ -23,7 +23,7 @@ input {
 
 .form-keyphrase-input {
   height: 3.5vh;
-  width: 35%;
+  width: 100%;
 }
 
 .form-main-input {
@@ -49,8 +49,26 @@ input {
   justify-content: center;
 }
 
-select {
+h1 {
+  font-size: 2.3vh;
+}
+
+a {
+  color: rgba(168, 216, 167, 0.6901960784);
+}
+
+.container-search-output-main {
+  flex-direction: column;
+  display: flex;
+  gap: 1vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
   border-radius: 14px;
+  padding: 2vh;
+}
+
+select {
+  border-radius: 10px;
   height: 4vh;
   border: none;
 }
@@ -78,21 +96,28 @@ select {
 }
 
 .container-search-output-link {
-  padding-top: 30px;
   display: flex;
   flex-direction: row;
+}
+
+hr {
+  width: 87%;
+  height: 2px;
+  background-color: rgb(60, 57, 57);
+  border-radius: 10px;
+  border: 0;
 }
 
 .link-separate-button {
   margin-left: 2vh;
   height: 35px;
   width: 80px;
-  box-shadow: 2px 3px;
+  box-shadow: 3px 3px #414141;
   border-radius: 14px;
   transition: 0.2s;
 }
 .link-separate-button:hover {
-  box-shadow: 1px 1px;
+  box-shadow: 0.5px 1px #414141;
   transition: 0.2s;
   background-color: #a8d8a7;
 }
@@ -145,13 +170,13 @@ form {
   height: 35px;
   /* justify-content: left; */
   width: 80px;
-  box-shadow: 2px 3px;
+  box-shadow: 3px 3px #414141;
   margin-top: 3%;
   border-radius: 14px;
   transition: 0.3s;
 }
 .botton-form:hover {
-  box-shadow: 1px 1px;
+  box-shadow: 0.5px 1px #414141;
   transition: 0.2s;
   background-color: #a8d8a7;
 }
